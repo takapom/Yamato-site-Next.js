@@ -1,0 +1,94 @@
+
+.firstComment{
+    display: flex;
+    flex-direction: column;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.hello{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.newMake{
+    font-weight: bold;
+}
+
+.newtext{
+    margin-top: 10px;
+}
+
+.kousin{
+    font-size: 40px;
+    color: rgb(149, 41, 90);
+}
+
+
+
+.studyContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    max-width: 600px;
+    background-color: rgb(103, 111, 174);
+    padding: 20px;
+    border:2px solid ;
+    border-radius: 8px;
+    margin-left: 10%;
+}
+
+.syukatuContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    max-width: 600px;
+    background-color: rgb(103, 103, 164);
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 8px;
+    margin-right: 10%;
+}
+
+.studySyukatuContainer{
+display: flex;
+justify-content: space-around;
+text-align: center;
+gap: 40px;
+margin-top: 50px;
+height: 40vh;
+}
+
+.containerNew{
+    display: flex; /* フレックスボックスを適用 */
+    justify-content: center; /* 水平方向の中央揃え */
+    align-items: center; /* 垂直方向の中央揃え */
+    /* height: 100vh;  */
+    width: 100%; /* 画面幅いっぱいに */
+}
+
+.newMake{
+    width: 70%;
+    max-width: 800px;
+    margin-top: 50px;
+    padding: 40px;
+    border: 2px solid;
+    background-color: rgb(224, 178, 178);
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 40px;
+    background-color: rgb(101, 70, 70);
+}
