@@ -1,6 +1,7 @@
 // import styles from "./blog.module.css"
 "use client";
 
+import Link from "next/link";
 import styles from "./blog.module.css"
 import { useState } from "react"
 import { addDoc, collection } from "firebase/firestore";
@@ -48,6 +49,9 @@ const createPost = async() => {
           <textarea placeholder='投稿内容を記入'  onChange={(e) => setPostText(e.target.value)}></textarea>
         </div>
         <button className={styles.postButton} onClick={createPost}>投稿する</button>
+        <Link href="all-blog">
+          <button>全ての投稿を見る</button>
+        </Link>
       </div>
    </div>
     )
