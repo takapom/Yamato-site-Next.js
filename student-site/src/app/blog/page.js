@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./blog.module.css"
 import { useState } from "react"
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../../firebase/config";
+import { db } from "../../firebase/config"; // インポートパスを修正
 // import { auth } from "../../../firebase/config";
 
 
@@ -20,8 +20,8 @@ const createPost = async() => {
   setTitle("")
   setPostText("")
   await addDoc(collection(db, "posts"), {
-    title: title,
-    postText: postText,
+    title: title,//タイトル
+    postText: postText,//内容
     // author:{
     //   username: うんち
     //   id: auth.currentUser.uid
