@@ -1,0 +1,73 @@
+/* body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5dc;
+    padding: 20px;
+    line-height: 1.6;
+    margin: 0;
+  } */
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* 擬似要素で試験用紙の横罫線を追加 */
+  .container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    background-image: linear-gradient(transparent 95%, #ccc 95%);
+    background-size: 100% 24px;
+    pointer-events: none;
+    z-index: 1;
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .nav {
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  .nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .section {
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .section h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    border-bottom: 2px solid #333;
+    padding-bottom: 5px;
+  }
+  
+  .section p {
+    margin-bottom: 10px;
+  }

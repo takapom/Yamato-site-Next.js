@@ -43,17 +43,17 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/" legacyBehavior>
+                <Link href="/blog" legacyBehavior>
                   <a className="nav-link">掲示板</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/" legacyBehavior>
+                <Link href="/testform" legacyBehavior>
                   <a className="nav-link">テスト対策フォーム</a>
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/" legacyBehavior>
+                <Link href="/programing" legacyBehavior>
                   <a className="nav-link">技術勉強</a>
                 </Link>
               </li>
