@@ -1,6 +1,6 @@
 import { auth, provider } from "../../firebase/config";;
 import { signInWithPopup } from "../../firebase/config";;
-import useNavigate from "../../firebase"
+import useNavigate from "../../firebase/config";
 
 export default function(){
     const navigate = useNavigate();

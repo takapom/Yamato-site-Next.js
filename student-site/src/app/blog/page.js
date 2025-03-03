@@ -18,6 +18,7 @@ const [postText, setPostText] = useState("");//投稿内容管理
 const createPost = async() => {
   <siderbar />
   window.alert("投稿しました")
+  
   setTitle("")
   setPostText("")
   await addDoc(collection(db, "posts"), {
