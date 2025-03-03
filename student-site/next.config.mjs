@@ -10,7 +10,7 @@
 // export default nextConfig;
 
 export default {
-  appDir: true,
+  // appDir: true,
   transpilePackages: ['some-package'],
   // 他の設定...
 }
