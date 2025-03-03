@@ -1,5 +1,5 @@
-import { auth, provider } from "../../firebase/config";;
-import { signInWithPopup } from "../../firebase/config";;
+import { signInWithPopup } from "firebase/auth";
+import { auth, provider } from "../../firebase/config";
 import useNavigate from "../../firebase/config";
 
 export default function(){
