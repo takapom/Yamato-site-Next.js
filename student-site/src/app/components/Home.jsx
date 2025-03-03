@@ -37,10 +37,9 @@ export default function Home() {
                         {post.postText}
                     </div>
                     <div className={styles.cotentText}>
-                    <div className={styles.cotentText}>
-  <p>投稿日時: {post.createdAt && post.createdAt.toDate().toLocaleString()}</p>
-</div>
-
+                      <div className={styles.cotentText}>
+                    <p>投稿日時: {post.createdAt && post.createdAt.toDate().toLocaleString()}</p>
+                        </div>
                     </div>
                     <div className={styles.nameAndDeleteButton}>
                         <button onClick={() => handleDelete(post.id)}>消去</button>
