@@ -4,9 +4,10 @@
 import Link from "next/link";
 import styles from "./blog.module.css"
 import { useState } from "react"
-import { addDoc, collection, serverTimestamp } from "firebase/firestore";
-import { db } from "../../firebase/config"; // インポートパスを修正
+import { addDoc, collection } from "firebase/firestore";
+import { db } from "../../firebase/config";//これ以上変更しない！！
 // import { auth } from "../../../firebase/config";
+ import { serverTimestamp } from "firebase/firestore";
 
 
 export default function Blog(){
@@ -21,18 +22,22 @@ const createPost = async() => {
   setPostText("")
   await addDoc(collection(db, "posts"), {
     title: title,//タイトル
-    postText: postText,
-    createdAt: serverTimestamp(),//作成時間を取得するためにcreatedを定義している
+    postText: postText,//内容
+    createdAt: serverTimestamp(), // 作成日時を設定
+    // author:{
+    //   username: うんち
+    //   id: auth.currentUser.uid
+    // }
   })
 }
 
-  const createPostPage = () => {
+  // const createPostPage = () => {
 
-  }
+  // }
 
-  const postContainer = () => {
+  // const postContainer = () => {
 
-  }
+  // }
     return(
     <div className={styles.createPostPage}>
         <div className={styles.postContainer}>
