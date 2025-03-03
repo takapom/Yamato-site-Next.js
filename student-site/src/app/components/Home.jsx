@@ -22,7 +22,7 @@ export default function Home() {
 
     const handleDelete = async(id) => {
         await deleteDoc(doc(db, "posts", id));
-        window.location.href = "/";
+        window.location.href = "/all-blog";
         window.alert("消去しました");
     };
 
@@ -43,6 +43,9 @@ export default function Home() {
                     </div>
                     <div className={styles.nameAndDeleteButton}>
                         <button onClick={() => handleDelete(post.id)}>消去</button>
+                    </div>
+                    <div className={styles.nameAndDeleteButton}>
+                        <button>chat</button>
                     </div>
                 </div>
             ))}

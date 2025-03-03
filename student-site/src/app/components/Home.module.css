@@ -36,12 +36,18 @@
   
   .nameAndDeleteButton{
       display: flex;
+      justify-content: center;
       align-items: center;
+      margin-top: 1rem;
+      width: 40%;
+      margin-left: 30%;
   }
   
+
   .nameAndDeleteButton button{
       flex: 10%;
-      padding: 7px;
+      padding: 2px;
+      font-weight: 500;
   }
   
   .nameAndDeleteButton h3{

@@ -9,11 +9,20 @@ export default function Page(){
     <main>
       {/* 以下はテストテキスト */}
        {/* <Siderbar /> */}
-      <div className={styles.firstComment}>
+      {/* <div className={styles.firstComment}>
         <p className={styles.hello}>大学生徒向けの<span>ポータルサイトを作成しました！！</span></p>
         <p className={styles.hello}>新しい機能を随時追加していきます！</p>
         <p className={styles.hello}>使い方はこちらから</p>
-      </div>
+      </div> */}
+
+      <div className={styles.container}>
+          <div className={styles.topicbox}>
+            <div className={styles.topicheader}>今週のトピック</div>
+            <div className={styles.topiccontent}>
+              今年度の新しいプロジェクトについて、学生の皆さんにご案内します。環境保護、持続可能な開発、そして最新のテクノロジーを組み合わせたプロジェクトがスタートします。詳細は来週のイベントで発表予定です！
+            </div>
+          </div>
+        </div>
 
       <div className={styles.containerNew}>
         <div className={styles.newMake}>
@@ -29,8 +38,7 @@ export default function Page(){
 
              <div className={styles.language}>
               <h3>就活情報</h3>
-              <p>Webページの「デザイン」を決める言語。色やレイアウト、アニメーションを設定できる。<br />
-              HTML＋CSSで静的なWebページを作成できる！！</p>
+              <p>これから就活やインターンが始まりどういう技術が必要か、何をやるのかなどまとめてます！！</p>
               <Link href="/programing">
               <button>こちら</button>
               </Link>
@@ -38,8 +46,7 @@ export default function Page(){
 
             <div className={styles.language}>
               <h3>開発言語</h3>
-              <p>Webページの「デザイン」を決める言語。色やレイアウト、アニメーションを設定できる。<br />
-              HTML＋CSSで静的なWebページを作成できる！！</p>
+              <p>システムエンジニアや開発の職種でどういった言語やツールがあるかわからない方向けにまとめてます！！</p>
               <Link href="/hunthing">
               <button>こちら</button>
               </Link>
