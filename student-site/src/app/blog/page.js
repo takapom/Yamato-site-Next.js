@@ -4,7 +4,7 @@
 import Link from "next/link";
 import styles from "./blog.module.css"
 import { useState } from "react"
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../../firebase/config"; // インポートパスを修正
 // import { auth } from "../../../firebase/config";
 
@@ -21,11 +21,8 @@ const createPost = async() => {
   setPostText("")
   await addDoc(collection(db, "posts"), {
     title: title,//タイトル
-    postText: postText,//内容
-    // author:{
-    //   username: うんち
-    //   id: auth.currentUser.uid
-    // }
+    postText: postText,
+    createdAt: serverTimestamp(),//作成時間を取得するためにcreatedを定義している
   })
 }
 

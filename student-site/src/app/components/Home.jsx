@@ -1,17 +1,21 @@
 "use client"
 
 import React, { useEffect, useState } from 'react';
-import { collection, getDocs, doc, deleteDoc } from "firebase/firestore";
+import { collection, getDocs, doc, deleteDoc, query, orderBy } from "firebase/firestore";
 import { db } from '../../firebase/config'; // インポートパスを確認
 import styles from "./Home.module.css";
+
 
 export default function Home() {
     const [postList, setPostList] = useState([]);
 
     useEffect(() => {
         const getPost = async () => {
-            const data = await getDocs(collection(db, "posts"));
+            const postRef = collection(db, "posts")
+            const  q = query(postRef, orderBy("createdAt", "desc"))
+            const data = await getDocs(q);
             setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+            // const q = query(data, orderBy("posts", "desc"));
         };
         getPost();
     }, []);
@@ -31,6 +35,12 @@ export default function Home() {
                     </div>
                     <div className={styles.postTextContainer}>
                         {post.postText}
+                    </div>
+                    <div className={styles.cotentText}>
+                    <div className={styles.cotentText}>
+  <p>投稿日時: {post.createdAt && post.createdAt.toDate().toLocaleString()}</p>
+</div>
+
                     </div>
                     <div className={styles.nameAndDeleteButton}>
                         <button onClick={() => handleDelete(post.id)}>消去</button>

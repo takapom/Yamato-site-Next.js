@@ -9,7 +9,7 @@ export default function Page(){
     <main>
        {/* <Siderbar /> */}
       <div className={styles.firstComment}>
-        <p className={styles.hello}>大和大学の情報学部の生徒向けの<span>ポータルサイトを作成しました！！</span></p>
+        <p className={styles.hello}>大学生徒向けの<span>ポータルサイトを作成しました！！</span></p>
         <p className={styles.hello}>新しい機能を随時追加していきます！</p>
         <p className={styles.hello}>使い方はこちらから</p>
       </div>
