@@ -26,19 +26,25 @@ export default function Page(){
       </div>
 
       <section className={styles.studySyukatuContainer}>
-        <div className={styles.studyContainer}>
-          <p>ここは何にしよか迷ってるけどプログラミングの解説載せるつもり！</p>
-          <Link href="/programing">
-            <button>check</button>
-          </Link>
-        </div>
 
-        <div className={styles.syukatuContainer}>
-          <p>ここも何にしよか迷ってるけど就活情報について載せるつもり！</p>
-          <Link href="/hunthing">
-            <button>check</button>
-          </Link>
-        </div>
+             <div className={styles.language}>
+              <h3>就活情報</h3>
+              <p>Webページの「デザイン」を決める言語。色やレイアウト、アニメーションを設定できる。<br />
+              HTML＋CSSで静的なWebページを作成できる！！</p>
+              <Link href="/programing">
+              <button>こちら</button>
+              </Link>
+            </div>
+
+            <div className={styles.language}>
+              <h3>開発言語</h3>
+              <p>Webページの「デザイン」を決める言語。色やレイアウト、アニメーションを設定できる。<br />
+              HTML＋CSSで静的なWebページを作成できる！！</p>
+              <Link href="/hunthing">
+              <button>こちら</button>
+              </Link>
+            </div>
+
       </section>
 
       <footer className={styles.footer}>
