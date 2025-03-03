@@ -40,3 +40,7 @@ body {
     border-radius: 5px;
 }
 
+.language  h3{
+    font-size: 30px;
+    font-weight: bold;
+}

@@ -26,14 +26,14 @@ export default function Page(){
 
       <section className={styles.studySyukatuContainer}>
         <div className={styles.studyContainer}>
-          <p>Programing</p>
+          <p>ここは何にしよか迷ってるけどプログラミングの解説載せるつもり！</p>
           <Link href="/programing">
             <button>check</button>
           </Link>
         </div>
 
         <div className={styles.syukatuContainer}>
-          <p>job hunting</p>
+          <p>ここも何にしよか迷ってるけど就活情報について載せるつもり！</p>
           <Link href="/hunthing">
             <button>check</button>
           </Link>
