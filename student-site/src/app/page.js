@@ -7,6 +7,7 @@ import Siderbar from "./components/Siderbar"
 export default function Page(){
   return (
     <main>
+      {/* 以下はテストテキスト */}
        {/* <Siderbar /> */}
       <div className={styles.firstComment}>
         <p className={styles.hello}>大学生徒向けの<span>ポータルサイトを作成しました！！</span></p>
