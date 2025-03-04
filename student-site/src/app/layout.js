@@ -22,12 +22,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ja">
-
+      <body>
         <Siderbar />
         <main className="container flex-grow-1 mt-4">
           {children}
         </main>
-
+        </body>
     </html>
   );
 }

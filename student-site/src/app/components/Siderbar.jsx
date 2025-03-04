@@ -14,7 +14,7 @@ export default function Sidebar() {
         <nav
         className="navbar navbar-expand-lg navbar-dark sticky-top"
         style={{
-          background: "linear-gradient(45deg,rgb(135, 125, 180), #928dab)",
+          background: "linear-gradient(45deg,rgba(30, 21, 204, 0.78), #928dab)",
           boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
         }}
       >
