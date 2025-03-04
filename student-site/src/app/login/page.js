@@ -9,10 +9,10 @@ import { useState } from "react";
 
 export default function LoginPage() {
     const router = useRouter();
-    const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+    const [isAuth, setIsAuth] = useState(false);
     const loginInWithGoogle = () => {
         signInWithPopup(auth, provider).then((result) => {
-            localStorage.setItem("isAuth", true)
+            // localStorage.setItem("isAuth", true)
             setIsAuth(true)
             router.push("/blog")
         })
@@ -25,7 +25,7 @@ export default function LoginPage() {
             Googleでログイン
         </button>
         <p className={styles.ortext}>または</p>
-        <p>アカウントをお持ちでないですか？ <a href="#" class="register-link">登録</a></p>
+        <p>アカウントをお持ちでないですか？ <a href="#" className={styles.registerlink}>登録</a></p>
     </div>
   )
 }

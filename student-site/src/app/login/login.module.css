@@ -1,0 +1,51 @@
+/* すべての要素のマージンやパディングをリセット */
+
+  
+  /* 画面全体をFlexboxで中央に配置 */
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px; /* 余白を付けることで小さい画面でもコンテンツがはみ出さないように */
+    background-color: #f0f0f0; /* 背景色はお好みで */
+  }
+  
+  /* ログイン用コンテナ（箱）のスタイル */
+  .logincontainer {
+    width: 100%;
+    max-width: 400px; /* 最大幅を指定してレスポンシブに対応 */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  /* Googleログインボタンのスタイル */
+  .googlebtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4285f4;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 10px 0;
+  }
+  
+  /* 「または」テキストのスタイル */
+  .ortext {
+    margin: 10px 0;
+    color: #666;
+    font-size: 0.9rem;
+  }
+  
+  /* 登録リンクのスタイル */
+  .registerlink {
+    color: #4285f4;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
