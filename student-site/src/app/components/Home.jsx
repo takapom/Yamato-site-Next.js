@@ -2,8 +2,9 @@
 
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs, doc, deleteDoc, query, orderBy } from "firebase/firestore";
-import { db } from '../../firebase/config'; // インポートパスを確認
+import { db, auth } from '../../firebase/config'; // インポートパスを確認
 import styles from "./Home.module.css";
+
 
 
 export default function Home() {
@@ -42,12 +43,22 @@ export default function Home() {
                         </div>
                     </div>
                     <div className={styles.nameAndDeleteButton}>
-                        <button onClick={() => handleDelete(post.id)}>消去</button>
-                    </div>
-                    <div className={styles.nameAndDeleteButton}>
                         <button>chat</button>
                     </div>
+
+                <div className={styles.usercontent}>
+                    <p>@:{post.author.username}</p>
                 </div>
+
+                {post.author.id === auth.currentUser.uid &&(
+                <div className={styles.nameAndDeleteButton}>
+                <button onClick={() => handleDelete(post.id)}>消去</button>
+                    </div>
+                )}
+
+                </div>
+            
+                
             ))}
         </div>
     );

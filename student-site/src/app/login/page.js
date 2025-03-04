@@ -1,20 +1,32 @@
-// import { auth, provider } from "../../firebase/config";;
-// import { signInWithPopup } from "../../firebase/config";;
-// import useNavigate from "../../firebase/config";
+"use client";
 
-// export default function(){
-//     const navigate = useNavigate();
-//     const loginInWithGoole = () => {
-//         signInWithPopup(auth, provider).then((result) => {
-//             localStorage.setItem("isAuth", true);
-//             setIsAuth(true);
-//         });
-//     };
+import styles from "./login.module.css"
+import { auth, provider } from "../../firebase/config"; 
+import { signInWithPopup } from "firebase/auth";
+import { useRouter } from "next/navigation"; // 修正箇所
+import { useState } from "react";
 
-//     return ( 
-//         <div>
-//             <p>ログインしてねー！</p>
-//             <button onClick={loginInWithGoole}>Gooleでログイン</button>
-//         </div>
-//     )
+
+export default function LoginPage() {
+    const router = useRouter();
+    const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
+    const loginInWithGoogle = () => {
+        signInWithPopup(auth, provider).then((result) => {
+            localStorage.setItem("isAuth", true)
+            setIsAuth(true)
+            router.push("/blog")
+        })
+    }
+  return (
+    <div className={styles.logincontainer}>
+        <h2>ログイン</h2>
+        <button className={styles.googlebtn} onClick={loginInWithGoogle}>
+            {/* <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" alt="Google ロゴ"> */}
+            Googleでログイン
+        </button>
+        <p className={styles.ortext}>または</p>
+        <p>アカウントをお持ちでないですか？ <a href="#" class="register-link">登録</a></p>
+    </div>
+  )
 }
+

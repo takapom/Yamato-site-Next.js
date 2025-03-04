@@ -5,7 +5,7 @@ import Link from "next/link";
 import styles from "./blog.module.css"
 import { useState } from "react"
 import { addDoc, collection } from "firebase/firestore";
-import { db } from "../../firebase/config";//これ以上変更しない！！
+import { auth, db } from "../../firebase/config";//これ以上変更しない！！
 // import { auth } from "../../../firebase/config";
  import { serverTimestamp } from "firebase/firestore";
 
@@ -25,10 +25,10 @@ const createPost = async() => {
     title: title,//タイトル
     postText: postText,//内容
     createdAt: serverTimestamp(), // 作成日時を設定
-    // author:{
-    //   username: うんち
-    //   id: auth.currentUser.uid
-    // }
+    author:{
+      username: auth.currentUser.displayName,
+      id: auth.currentUser.uid
+    }
   })
 }
 

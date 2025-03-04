@@ -43,7 +43,7 @@ export default function Sidebar() {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link href="/blog" legacyBehavior>
+                <Link href="/login" legacyBehavior>
                   <a className="nav-link">掲示板</a>
                 </Link>
               </li>
