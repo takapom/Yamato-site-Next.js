@@ -6,7 +6,6 @@ import { db, auth } from '../../firebase/config'; // インポートパスを確
 import styles from "./Home.module.css";
 
 
-
 export default function Home() {
     const [postList, setPostList] = useState([]);
 
@@ -50,15 +49,14 @@ export default function Home() {
                     <p>@:{post.author.username}</p>
                 </div>
 
+                
+
                 {post.author.id === auth.currentUser.uid &&(
                 <div className={styles.nameAndDeleteButton}>
                 <button onClick={() => handleDelete(post.id)}>消去</button>
                     </div>
                 )}
-
                 </div>
-            
-                
             ))}
         </div>
     );

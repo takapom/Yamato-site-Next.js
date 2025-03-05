@@ -11,12 +11,13 @@ import { auth, db } from "../../firebase/config";//これ以上変更しない�
 
 
 export default function Blog(){
+const currentUser = auth.currentUser;
 const [ title, setTitle ] = useState("");//タイトル管理
 const [postText, setPostText] = useState("");//投稿内容管理
 
 // データベースに投稿
 const createPost = async() => {
-  <siderbar />
+  // <siderbar />
   window.alert("投稿しました")
   
   setTitle("")
@@ -42,7 +43,11 @@ const createPost = async() => {
     return(
     <div className={styles.createPostPage}>
         <div className={styles.postContainer}>
-        <h1 className=''>投稿する</h1>
+          {currentUser ? (
+            <h1>ようこそ {currentUser.displayName}さん</h1>
+          ):(
+            <h1>ようこそゲストさん！</h1>
+          )}
          <div className={styles.inputPost}>
           <div>タイトル</div>
            <input type="text" placeholder='タイトルを記入' onChange={(e) => setTitle(e.target.value)}/>
