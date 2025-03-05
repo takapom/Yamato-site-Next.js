@@ -1,4 +1,19 @@
 .createPostPage{
+    margin-top: 60px;
+    background-image: url(https://thumb.photo-ac.com/53/53201c68fefb072eeca2b6f014dd6811_w.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* filter: blur(5px); ぼかしの強さ */
+    z-index: 1;
+}
+
+.createPostPage{
     display: flex;
     justify-content: center;
     align-items: center;

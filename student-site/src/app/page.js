@@ -69,20 +69,31 @@ export default function Page() {
   style={{
     backgroundImage: 'url("https://qureo.jp/class/wp/content/uploads/%E3%83%95%E3%82%9A%E3%83%AD%E3%82%AF%E3%82%99%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%AF%E3%82%99%E3%81%A8%E3%81%AF%EF%BC%9F%E6%84%8F%E5%91%B3%E3%82%84%E5%9F%BA%E7%A4%8E%E7%9F%A5%E8%AD%98%E3%82%92%E5%88%86%E3%81%8B%E3%82%8A%E3%82%84%E3%81%99%E3%81%8F%E8%AA%AC%E6%98%8E%EF%BC%81.jpg")',
     backgroundSize: 'cover',
-    backgroundPosition: 'center'
+    backgroundPosition: 'center',
   }}
 >
 
     <div className="row py-lg-5">
       <div className="col-lg-6 col-md-8 mx-auto">
-        <h1 className="fw-light">大和大学サイト</h1>
-        <p className="lead text-body-secondary">情報学部生向けに作りました¡¡</p>
+        <h1 className="fw-light"></h1>
+        <p className="lead text-body-secondary"></p>
         <p>
-          <a href="#" className="btn btn-primary my-2">Main call to action</a>
-          <a href="#" className="btn btn-secondary my-2">Secondary action</a>
+          <a href="#" className="btn btn-primary my-2">How to use Web-site</a>
         </p>
       </div>
-    </div>
+    </div> 
+    {/* <div className="row py-lg-5">
+  <div className="col-lg-6 col-md-8 mx-auto position-relative" style={{ minHeight: '100px' }}>
+    <h1 className="fw-light"></h1>
+    <p className="lead text-body-secondary"></p>
+    <a href="#" className="btn btn-primary position-absolute bottom-0 end-0 my-2"
+    style={{bottom: '-20px' }}
+    >
+      How to use Web-site
+    </a>
+  </div>
+</div> */}
+
   </section>
 
   <div className="album py-5 bg-body-tertiary">
@@ -94,13 +105,15 @@ export default function Page() {
       <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
         <title>Placeholder</title>
         <rect width="100%" height="100%" fill="#55595c" />
-        <text x="50%" y="50%" fill="#eceeef" dy=".3em">就活</text>
+        <text x="50%" y="50%" fill="white" dy=".3em"fontWeight="bold">就活</text>
       </svg>
       <div className="card-body">
-        <p className="card-text">就活情報</p>
+      <p className="card-text fw-bold fs-5">就活情報</p>
         <div className="d-flex justify-content-between align-items-center">
           <div className="btn-group">
+            <Link href="hunthing">
             <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+            </Link>
             <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
           </div>
           <small className="text-body-secondary">9 mins</small>
@@ -112,14 +125,16 @@ export default function Page() {
     <div className="card shadow-sm">
       <svg className="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false">
         <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#55595c" />
+        <rect width="100%" height="100%" fill="white" />
         <text x="50%" y="50%" fill="#eceeef" dy=".3em">プログラミング</text>
       </svg>
       <div className="card-body">
-        <p className="card-text">プログラミング言語</p>
+        <p className="card-text fw-bold fs-5">プログラミング言語</p>
         <div className="d-flex justify-content-between align-items-center">
           <div className="btn-group">
+            <Link href="programing">
             <button type="button" className="btn btn-sm btn-outline-secondary">View</button>
+            </Link>
             <button type="button" className="btn btn-sm btn-outline-secondary">Edit</button>
           </div>
           <small className="text-body-secondary">9 mins</small>
@@ -143,15 +158,17 @@ export default function Page() {
     </a>
 
     <ul className="nav col-md-4 justify-content-end">
-      <li className="nav-item"><a href="#" classNameName="nav-link px-2 text-body-secondary">Home</a></li>
-      <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Features</a></li>
-      <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">FAQs</a></li>
-      <li className="nav-item"><a href="#" className="nav-link px-2 text-body-secondary">About</a></li>
+      <li ><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
+      <li ><a href="#" className="nav-link px-2 text-body-secondary">Features</a></li>
+      <li ><a href="#" className="nav-link px-2 text-body-secondary">Pricing</a></li>
+      <li ><a href="#" className="nav-link px-2 text-body-secondary">FAQs</a></li>
+      <li ><a href="#" className="nav-link px-2 text-body-secondary">About</a></li>
     </ul>
   </footer>
 </div>
-<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossOrigin="anonymous">
+
+</script>
 
     </main>
   );

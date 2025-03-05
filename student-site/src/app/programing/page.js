@@ -2,7 +2,7 @@ import styles from './programing.module.css'
 
 export default function Page() {
     return(
-        <>
+        <div className={styles.all}>
         <div className={styles.programContainer}>
           <h1 className={styles.firstText}>
             プログラミング言語やフレームワーク、ツールなどを分かりやすく書いてます！！
@@ -78,6 +78,6 @@ export default function Page() {
             </div>
           </section>
         </div>
-        </>
+        </div>
     )
 }
