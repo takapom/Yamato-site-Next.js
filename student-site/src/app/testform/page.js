@@ -1,4 +1,5 @@
 import styles from "./test.module.css"
+import Link from "next/link"
 
 export default function Testform(){
     return (
