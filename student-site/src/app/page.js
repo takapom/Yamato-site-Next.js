@@ -78,21 +78,12 @@ export default function Page() {
         <h1 className="fw-light"></h1>
         <p className="lead text-body-secondary"></p>
         <p>
-          <a href="#" className="btn btn-primary my-2">How to use Web-site</a>
+          <Link href="how_to" className="btn btn-primary my-2">
+          How to use Web-site
+          </Link>
         </p>
       </div>
     </div> 
-    {/* <div className="row py-lg-5">
-  <div className="col-lg-6 col-md-8 mx-auto position-relative" style={{ minHeight: '100px' }}>
-    <h1 className="fw-light"></h1>
-    <p className="lead text-body-secondary"></p>
-    <a href="#" className="btn btn-primary position-absolute bottom-0 end-0 my-2"
-    style={{bottom: '-20px' }}
-    >
-      How to use Web-site
-    </a>
-  </div>
-</div> */}
 
   </section>
 
@@ -153,22 +144,32 @@ export default function Page() {
   <footer className="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p className="col-md-4 mb-0 text-body-secondary">&copy; 2025 Yamato University</p>
 
-    <a href="/" className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
-   
-    </a>
+    <Link href="/" className="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+    
+    </Link>
 
-    <ul className="nav col-md-4 justify-content-end">
-      <li ><a href="#" className="nav-link px-2 text-body-secondary">Home</a></li>
-      <li ><a href="#" className="nav-link px-2 text-body-secondary">Features</a></li>
-      <li ><a href="#" className="nav-link px-2 text-body-secondary">Pricing</a></li>
-      <li ><a href="#" className="nav-link px-2 text-body-secondary">FAQs</a></li>
-      <li ><a href="#" className="nav-link px-2 text-body-secondary">About</a></li>
-    </ul>
+  <ul className="nav col-md-4 justify-content-end">
+  <li>
+    <Link href="#" className="nav-link px-2 text-body-secondary">Home</Link>
+  </li>
+  <li>
+    <Link href="#" className="nav-link px-2 text-body-secondary">Features</Link>
+  </li>
+  <li>
+    <Link href="#" className="nav-link px-2 text-body-secondary">Pricing</Link>
+  </li>
+  <li>
+    <Link href="#" className="nav-link px-2 text-body-secondary">FAQs</Link>
+  </li>
+  <li>
+    <Link href="#" className="nav-link px-2 text-body-secondary">About</Link>
+  </li>
+</ul>
   </footer>
 </div>
-<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossOrigin="anonymous">
+{/* <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossOrigin="anonymous"> */}
 
-</script>
+{/* </script> */}
 
     </main>
   );

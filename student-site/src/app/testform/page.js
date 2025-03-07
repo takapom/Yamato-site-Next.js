@@ -9,11 +9,11 @@ export default function Testform(){
         <div className={styles.container}>
       <h1 className={styles.title}>〇〇試験対策</h1>
       <nav className={styles.nav}>
-        <a href="#mathematics">〇〇</a>
-        <a href="#physics">〇〇</a>
-        <a href="#chemistry">〇〇</a>
-        <a href="#english">〇〇</a>
-        <a href="#history">〇〇</a>
+        <Link href="#mathematics">〇〇</Link>
+        <Link href="#physics">〇〇</Link>
+        <Link href="#chemistry">〇〇</Link>
+        <Link href="#english">〇〇</Link>
+        <Link href="#history">〇〇</Link>
       </nav>
 
       <section id="mathematics" className={styles.section}>
